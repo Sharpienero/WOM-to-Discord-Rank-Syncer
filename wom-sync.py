@@ -21,6 +21,9 @@ CREATE_MISSING_ROLES = True
 REMOVE_WOM_ROLES_NOT_ASSIGNED = True
 ROLE_CREATION_CASING = "title"
 WOM_ROLE_NAMES = {"Squire", "Knight", "Owner"}  # change this to your WOM/clan roles
+WOM_USER_AGENT = (
+    "PUT_YOUR_USER_AGENT_HERE"  # Optional: Set a custom user agent for WOM API requests
+)
 
 intents = discord.Intents.default()
 intents.members = True
@@ -36,7 +39,15 @@ def get_wom_members() -> Dict[str, str]:
         Dict[str, str]: A dictionary mapping usernames (lowercase) to their WOM role.
     """
     url = f"https://api.wiseoldman.net/v2/groups/{WOM_GROUP_ID}"
-    headers = {"x-api-key": f"{WOM_API_KEY}"} if WOM_API_KEY else {}
+    headers = (
+        {
+            "x-api-key": f"{WOM_API_KEY}",
+        }
+        if WOM_API_KEY
+        else {}
+    )
+    if WOM_USER_AGENT:
+        headers["User-Agent"] = WOM_USER_AGENT
     try:
         resp = requests.get(url, headers=headers, timeout=10)
         resp.raise_for_status()

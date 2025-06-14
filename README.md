@@ -9,7 +9,7 @@ It supports both manual sync via a slash command and automated sync every 5 minu
 
 ```sh
 git clone https://github.com/Sharpienero/WOM-to-Discord-Rank-Syncer.git
-cd <your-repo-directory>
+cd WOM-To-Discord-Rank-Syncer
 ```
 
 ### 2. Create and Activate a Virtual Environment
