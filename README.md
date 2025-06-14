@@ -8,7 +8,7 @@ It supports both manual sync via a slash command and automated sync every 5 minu
 ### 1. Clone the Repository
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/Sharpienero/WOM-to-Discord-Rank-Syncer.git
 cd <your-repo-directory>
 ```
 
@@ -59,7 +59,7 @@ python wom-sync.py
 ## Usage
 
 - The bot will automatically sync roles every 5 minutes.
-- To manually trigger a sync, use the `/syncwom` slash command in your Discord server.
+- To manually trigger a sync, use the `/sync-wom-ranks` slash command in your Discord server.
 
 ---
 
