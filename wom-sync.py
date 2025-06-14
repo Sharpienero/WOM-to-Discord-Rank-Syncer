@@ -36,7 +36,7 @@ def get_wom_members() -> Dict[str, str]:
         Dict[str, str]: A dictionary mapping usernames (lowercase) to their WOM role.
     """
     url = f"https://api.wiseoldman.net/v2/groups/{WOM_GROUP_ID}"
-    headers = {"Authorization": f"Bearer {WOM_API_KEY}"} if WOM_API_KEY else {}
+    headers = {"x-api-key": f"{WOM_API_KEY}"} if WOM_API_KEY else {}
     try:
         resp = requests.get(url, headers=headers, timeout=10)
         resp.raise_for_status()
