@@ -1,7 +1,7 @@
 # WOM Discord Sync Bot
 
-This bot automatically synchronizes Discord roles with Wise Old Man (WOM) group ranks.  
-It supports both manual sync via a slash command and automated sync every 5 minutes.
+This bot automatically synchronizes Discord roles with Wise Old Man (WOM) group ranks based on the discord username/nickname.  
+It supports both manual sync via a slash command (wom-sync-ranks) and automated sync every 5 minutes.
 
 ## Setup Instructions
 
